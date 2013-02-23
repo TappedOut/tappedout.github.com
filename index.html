@@ -94,14 +94,13 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
 
 <p>URI: /api/mtg/boosters/[set_A_tla],....,[set_Z_tla]/?pack_size=X [GET]</p>
 
-<ul>
-<li>
 <p>pack_size can be [14, 15], defaults to 15</p>
 
-<p>/api/mtg/boosters/rav,m10,9ed/
-/api/mtg/boosters/rav,m10,9ed/?pack_size=14</p>
-</li>
-</ul><p>Response:  JSON list of packs in order given, each with a list of cardspecs. </p>
+<pre><code>/api/mtg/boosters/rav,m10,9ed/
+/api/mtg/boosters/rav,m10,9ed/?pack_size=14
+</code></pre>
+
+<p>Response:  JSON list of packs in order given, each with a list of cardspecs. </p>
 
 <pre><code>[  # JSON list of packs
    [  # Pack: List of CardSpec (see above)
