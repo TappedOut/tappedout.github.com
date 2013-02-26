@@ -125,6 +125,25 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
    ]
 }
 </code></pre>
+
+<h2>Base Resources</h2>
+
+<h3>TappedOut User Session [Private]</h3>
+
+<p>Returns a user and their displayname given a valid TappedOut cookie. Bear in mind the 'display' may be an html snippet.</p>
+
+<p>URI: /api/v1/cookie/*cookie*/</p>
+
+<pre><code>/api/v1/cookie/ffa6b0344df1e8fe775af3dd99df4a6/?access_token=API_ACCESS_TOKEN
+</code></pre>
+
+<p>Response:</p>
+
+<pre><code>{
+    "user": "Some User Name",
+    "display": "&lt;font color=\"blue\"&gt;Some&lt;/font&gt; User Name",
+}
+</code></pre>
       </section>
     </div>
 
