@@ -66,6 +66,21 @@ a specific printing, but it defaults to the latest one.</p>
 
 <h2>Collection Resources</h2>
 
+<h3>Collection [Public with cookie or API Key]</h3>
+
+<p>URI: /api/collection/collection/  [GET]</p>
+
+<p>Response:</p>
+
+<pre><code>"deck": [
+    {"user_display": "&lt;font color=\"black\"&gt;yea&lt;/font&gt;&lt;font color=\"red\"&gt;GO!&lt;/font&gt;",
+     "name": "DOMINARIA - Tolaria [D10.1a] copy", 
+     "url": "http://tappedout.net/mtg-decks/dominaria-tolaria-d101a-copy/", 
+     "inventory": [["Tolaria West", {"b": "main", "qty": 1}], ...]}
+"cube": [
+    {.....]
+</code></pre>
+
 <h3>Inventory [Public with cookie]</h3>
 
 <p>Allows you to change inventory of a collection on TappedOut. You must have a TappedOut
@@ -154,7 +169,17 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
       </footer>
     </div>
 
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-622331-17");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
 
   </body>
 </html>
