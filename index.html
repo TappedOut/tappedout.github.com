@@ -66,9 +66,10 @@ a specific printing, but it defaults to the latest one.</p>
 
 <h2>Collection Resources</h2>
 
-<h3>Collection [Public with cookie or API Key]</h3>
+<h3>Collection List [Public with cookie or API Key]</h3>
 
-<p>URI: /api/collection/collection/  [GET]</p>
+<p>URI: /api/collection/collection/  <a href="all%20of%20all%20types">GET</a>
+URI: /api/collection/collection:[deck/cube/list/binder]/  <a href="all%20of%20type">GET</a></p>
 
 <p>Response:</p>
 
@@ -79,6 +80,20 @@ a specific printing, but it defaults to the latest one.</p>
      "inventory": [["Tolaria West", {"b": "main", "qty": 1}], ...]}
 "cube": [
     {.....]
+</code></pre>
+
+<h3>Collection Detail [Public with cookie or API Key]</h3>
+
+<p>URI: /api/collection:deck/dominaria-tolaria-d101a-copy/  [GET]</p>
+
+<p>you may pass card_fields GET variable to get a subset of inventory</p>
+
+<p>Response:</p>
+
+<pre><code> {"user_display": "&lt;font color=\"black\"&gt;yea&lt;/font&gt;&lt;font color=\"red\"&gt;GO!&lt;/font&gt;",
+  "name": "DOMINARIA - Tolaria [D10.1a] copy", 
+  "url": "http://tappedout.net/mtg-decks/dominaria-tolaria-d101a-copy/", 
+  "inventory": [["Tolaria West", {"b": "main", "qty": 1}], ...]}
 </code></pre>
 
 <h3>Inventory [Public with cookie]</h3>
@@ -106,6 +121,8 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
 <p>URI: /api/collection/cube/*cube_slug*/booster/?count=X [GET]</p>
 
 <p>count can be anything under 100 and above 0 and an integer</p>
+
+<p>you may pass card_fields as a GET variable if you want a subset of card attributes.</p>
 
 <p>Response:  JSON list of packs in order given, each with a list of cardspecs. </p>
 
