@@ -39,6 +39,9 @@
 depending on the language. It can contain information, such as image, of
 a specific printing, but it defaults to the latest one.</p>
 
+<p>In general, where CardSpecs are returned by any API, you may passcard_fields=['attr',...']
+as a GET variable to restrict the response to only those you care about.</p>
+
 <pre><code>{
     "name": "Demonic Tutor",
     "slug": "demonic-tutor",
@@ -63,6 +66,36 @@ a specific printing, but it defaults to the latest one.</p>
 <h3>Validate format of a list of cards</h3>
 
 <p><a href="http://validator.tappedout.net/validate/?cards=%5B%22llanowar%20elves%22,%22phyrexian%20dreadnought%22%5D&amp;format=standard">/validate/?cards=["llanowar elves","phyrexian dreadnought"]&amp;format=standard</a></p>
+
+<h2>MTG Resources</h2>
+
+<h3>MTG Set Booster [Public]</h3>
+
+<p>Returns a response that's like opening a pack of cards.</p>
+
+<p>URI: /api/mtg/boosters/?tla=count&amp;pack_size=X [GET]</p>
+
+<p>pack_size can be [14, 15], defaults to 15</p>
+
+<pre><code>/api/mtg/booster/?rav=10&amp;m10=5
+/api/mtg/booster/?rav=3&amp;m10=3&amp;9ed=4&amp;pack_size=14
+</code></pre>
+
+<p>Response:  JSON map of the sets given, mapped to their packs (a list of CardSpecs). </p>
+
+<pre><code>{  
+   "set": [  # Pack: List of CardSpec (see above)
+        {"card_name": "Demonic Tutor" ... },
+        {"card_name": "Phyrexian Dreadnought" ... },
+   ]
+}
+</code></pre>
+
+<h3>Card Detail  (Developer Token)</h3>
+
+<p>URI /api/mtg/[card slug]/ [GET]</p>
+
+<p>Response with a CardSpec</p>
 
 <h2>Collection Resources</h2>
 
@@ -134,33 +167,9 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
 ]
 </code></pre>
 
-<h2>MTG Resources</h2>
-
-<h3>MTG Set Booster [Public]</h3>
-
-<p>Returns a response that's like opening a pack of cards.</p>
-
-<p>URI: /api/mtg/boosters/?tla=count&amp;pack_size=X [GET]</p>
-
-<p>pack_size can be [14, 15], defaults to 15</p>
-
-<pre><code>/api/mtg/booster/?rav=10&amp;m10=5
-/api/mtg/booster/?rav=3&amp;m10=3&amp;9ed=4&amp;pack_size=14
-</code></pre>
-
-<p>Response:  JSON map of the sets given, mapped to their packs (a list of CardSpecs). </p>
-
-<pre><code>{  
-   "set": [  # Pack: List of CardSpec (see above)
-        {"card_name": "Demonic Tutor" ... },
-        {"card_name": "Phyrexian Dreadnought" ... },
-   ]
-}
-</code></pre>
-
 <h2>Base Resources</h2>
 
-<h3>TappedOut User Session [Private]</h3>
+<h3>TappedOut User Session [Developer Access Token]</h3>
 
 <p>Returns a user and their displayname given a valid TappedOut cookie. Bear in mind the 'display' may be an html snippet.</p>
 
