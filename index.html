@@ -97,7 +97,20 @@ as a GET variable to restrict the response to only those you care about.</p>
 
 <p>Response with a CardSpec</p>
 
-<h2>Collection Resources</h2>
+<h2>Deck Resources</h2>
+
+<h3>Latest Decks [Public]</h3>
+
+<p>URI /api/deck/latest/[list name]/ [GET]</p>
+
+<p>List name is a slug (lower case, hyphens replace spaces) and can flexibly be either</p>
+
+<ul>
+<li>Any of: 'top8', 'featured', 'latest', 'top8-latest'</li>
+<li>An MTG Format name</li>
+<li>A Deck Hub name (See <a href="http://tappedout.net/mtg-deck-builder/">http://tappedout.net/mtg-deck-builder/</a>)</li>
+<li>A Card name</li>
+</ul><h2>Collection Resources</h2>
 
 <h3>Collection List [Public with cookie or API Key]</h3>
 
