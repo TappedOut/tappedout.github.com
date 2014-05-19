@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="tappedout.github.com : TappedOut API" />
+    <meta name="description" content="tappedout.github.com/api : TappedOut API" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>tappedout.github.com</title>
+    <title>tappedout.github.com/api</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/TappedOut">View on GitHub</a>
 
-          <h1 id="project_title">tappedout.github.com</h1>
+          <h1 id="project_title">tappedout.github.com/api</h1>
           <h2 id="project_tagline">TappedOut API</h2>
 
         </header>
@@ -27,13 +27,16 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>Welcome</h1>
+        <h1>
+<a name="welcome" class="anchor" href="#welcome"><span class="octicon octicon-link"></span></a>Welcome</h1>
 
 <p>Thanks for checking out TappedOut's API</p>
 
-<h1>Key Concepts</h1>
+<h1>
+<a name="key-concepts" class="anchor" href="#key-concepts"><span class="octicon octicon-link"></span></a>Key Concepts</h1>
 
-<h2>CardSpec</h2>
+<h2>
+<a name="cardspec" class="anchor" href="#cardspec"><span class="octicon octicon-link"></span></a>CardSpec</h2>
 
 <p>A CardSpec is a representation of a card. Its a map, a hash, or a dict,
 depending on the language. It can contain information, such as image, of
@@ -51,25 +54,32 @@ as a GET variable to restrict the response to only those you care about.</p>
 }
 </code></pre>
 
-<h1>API Endpoints</h1>
+<h1>
+<a name="api-endpoints" class="anchor" href="#api-endpoints"><span class="octicon octicon-link"></span></a>API Endpoints</h1>
 
-<h2>validator.tappedout.net</h2>
+<h2>
+<a name="validatortappedoutnet" class="anchor" href="#validatortappedoutnet"><span class="octicon octicon-link"></span></a>validator.tappedout.net</h2>
 
-<h3>Check for format of a single card</h3>
+<h3>
+<a name="check-for-format-of-a-single-card" class="anchor" href="#check-for-format-of-a-single-card"><span class="octicon octicon-link"></span></a>Check for format of a single card</h3>
 
 <p><a href="http://validator.tappedout.net/validate/?cards=%5B%22Black%20Lotus%22%5D">/validate/?cards=["Black Lotus"]</a></p>
 
-<h3>Check format for list of cards</h3>
+<h3>
+<a name="check-format-for-list-of-cards" class="anchor" href="#check-format-for-list-of-cards"><span class="octicon octicon-link"></span></a>Check format for list of cards</h3>
 
 <p><a href="http://validator.tappedout.net/validate/?cards=%5B%22llanowar%20elves%22,%22phyrexian%20dreadnought%22%5D">/validate/?cards=["llanowar elves","phyrexian dreadnought"]</a>  </p>
 
-<h3>Validate format of a list of cards</h3>
+<h3>
+<a name="validate-format-of-a-list-of-cards" class="anchor" href="#validate-format-of-a-list-of-cards"><span class="octicon octicon-link"></span></a>Validate format of a list of cards</h3>
 
 <p><a href="http://validator.tappedout.net/validate/?cards=%5B%22llanowar%20elves%22,%22phyrexian%20dreadnought%22%5D&amp;format=standard">/validate/?cards=["llanowar elves","phyrexian dreadnought"]&amp;format=standard</a></p>
 
-<h2>MTG Resources</h2>
+<h2>
+<a name="mtg-resources" class="anchor" href="#mtg-resources"><span class="octicon octicon-link"></span></a>MTG Resources</h2>
 
-<h3>MTG Set Booster [Public]</h3>
+<h3>
+<a name="mtg-set-booster-public" class="anchor" href="#mtg-set-booster-public"><span class="octicon octicon-link"></span></a>MTG Set Booster [Public]</h3>
 
 <p>Returns a response that's like opening a pack of cards.</p>
 
@@ -91,15 +101,18 @@ as a GET variable to restrict the response to only those you care about.</p>
 }
 </code></pre>
 
-<h3>Card Detail  (Developer Token)</h3>
+<h3>
+<a name="card-detail--developer-token" class="anchor" href="#card-detail--developer-token"><span class="octicon octicon-link"></span></a>Card Detail  (Developer Token)</h3>
 
 <p>URI /api/mtg/[card slug]/ [GET]</p>
 
 <p>Response with a CardSpec</p>
 
-<h2>Deck Resources</h2>
+<h2>
+<a name="deck-resources" class="anchor" href="#deck-resources"><span class="octicon octicon-link"></span></a>Deck Resources</h2>
 
-<h3>Latest Decks [Public]</h3>
+<h3>
+<a name="latest-decks-public" class="anchor" href="#latest-decks-public"><span class="octicon octicon-link"></span></a>Latest Decks [Public]</h3>
 
 <p>URI /api/deck/latest/[list name]/ [GET]</p>
 
@@ -110,9 +123,11 @@ as a GET variable to restrict the response to only those you care about.</p>
 <li>An MTG Format name</li>
 <li>A Deck Hub name (See <a href="http://tappedout.net/mtg-deck-builder/">http://tappedout.net/mtg-deck-builder/</a>)</li>
 <li>A Card name</li>
-</ul><h2>Collection Resources</h2>
+</ul><h2>
+<a name="collection-resources" class="anchor" href="#collection-resources"><span class="octicon octicon-link"></span></a>Collection Resources</h2>
 
-<h3>Collection List [Public with cookie or API Key]</h3>
+<h3>
+<a name="collection-list-public-with-cookie-or-api-key" class="anchor" href="#collection-list-public-with-cookie-or-api-key"><span class="octicon octicon-link"></span></a>Collection List [Public with cookie or API Key]</h3>
 
 <p>URI: /api/collection/collection/  <a href="all%20of%20all%20types">GET</a>
 URI: /api/collection/collection:[deck/cube/list/binder]/  <a href="all%20of%20type">GET</a></p>
@@ -128,7 +143,8 @@ URI: /api/collection/collection:[deck/cube/list/binder]/  <a href="all%20of%20ty
     {.....]
 </code></pre>
 
-<h3>Collection Detail [Public with cookie or API Key]</h3>
+<h3>
+<a name="collection-detail-public-with-cookie-or-api-key" class="anchor" href="#collection-detail-public-with-cookie-or-api-key"><span class="octicon octicon-link"></span></a>Collection Detail [Public with cookie or API Key]</h3>
 
 <p>URI: /api/collection:deck/dominaria-tolaria-d101a-copy/  [GET]</p>
 
@@ -142,17 +158,19 @@ URI: /api/collection/collection:[deck/cube/list/binder]/  <a href="all%20of%20ty
   "inventory": [["Tolaria West", {"b": "main", "qty": 1}], ...]}
 </code></pre>
 
-<h3>Inventory [Public with cookie]</h3>
+<h3>
+<a name="inventory-public-with-cookie" class="anchor" href="#inventory-public-with-cookie"><span class="octicon octicon-link"></span></a>Inventory [Public with cookie]</h3>
 
 <p>Allows you to change inventory of a collection on TappedOut. You must have a TappedOut
 cookie, so this mostly only works on client-side calls by logged-in users.</p>
 
-<p>URI: /api/collection/*collection_type*/*collection_slug*/inventory/ [PUT]</p>
+<p>URI: /api/collection/<em>collection_type</em>/<em>collection_slug</em>/inventory/ [PUT]</p>
 
 <ul>
 <li>   collection_type [deck, cube, binder, list]</li>
 <li>   collection_slug - for decks, cubes, lists, the slug. for binder, the username</li>
-</ul><h4>PUT  (JSON list of changes)</h4>
+</ul><h4>
+<a name="put--json-list-of-changes" class="anchor" href="#put--json-list-of-changes"><span class="octicon octicon-link"></span></a>PUT  (JSON list of changes)</h4>
 
 <pre><code>?changes=[{"quantity": "+3", "card": "demonic tutor", "board": "side"}]  Adds 3
 ?changes=[{"quantity": 3, "card": "demonic tutor", "board": "side"}]   Sets to 3
@@ -162,9 +180,10 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
 
 <p>Response: A string and status code, aka "OK" 200 or "Error" 400</p>
 
-<h3>Cube Boosters [Public]</h3>
+<h3>
+<a name="cube-boosters-public" class="anchor" href="#cube-boosters-public"><span class="octicon octicon-link"></span></a>Cube Boosters [Public]</h3>
 
-<p>URI: /api/collection/cube/*cube_slug*/booster/?count=X [GET]</p>
+<p>URI: /api/collection/cube/<em>cube_slug</em>/booster/?count=X [GET]</p>
 
 <p>count can be anything under 100 and above 0 and an integer</p>
 
@@ -180,13 +199,15 @@ cookie, so this mostly only works on client-side calls by logged-in users.</p>
 ]
 </code></pre>
 
-<h2>Base Resources</h2>
+<h2>
+<a name="base-resources" class="anchor" href="#base-resources"><span class="octicon octicon-link"></span></a>Base Resources</h2>
 
-<h3>TappedOut User Session [Developer Access Token]</h3>
+<h3>
+<a name="tappedout-user-session-developer-access-token" class="anchor" href="#tappedout-user-session-developer-access-token"><span class="octicon octicon-link"></span></a>TappedOut User Session [Developer Access Token]</h3>
 
 <p>Returns a user and their displayname given a valid TappedOut cookie. Bear in mind the 'display' may be an html snippet.</p>
 
-<p>URI: /api/v1/cookie/*cookie*/</p>
+<p>URI: /api/v1/cookie/<em>cookie</em>/</p>
 
 <pre><code>/api/v1/cookie/ffa6b0344df1e8fe775af3dd99df4a6/?access_token=API_ACCESS_TOKEN
 </code></pre>
