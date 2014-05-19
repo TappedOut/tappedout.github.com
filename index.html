@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="tappedout.github.com/api : TappedOut API" />
+    <meta name="description" content="tappedout.github.com/api : TappedOut" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/TappedOut">View on GitHub</a>
 
           <h1 id="project_title">tappedout.github.com/api</h1>
-          <h2 id="project_tagline">TappedOut API</h2>
+          <h2 id="project_tagline">TappedOut</h2>
 
         </header>
     </div>
@@ -30,10 +30,64 @@
         <h1>
 <a name="welcome" class="anchor" href="#welcome"><span class="octicon octicon-link"></span></a>Welcome</h1>
 
-<p>Thanks for checking out TappedOut's API</p>
+<h1>
+<a name="tappedoutjs" class="anchor" href="#tappedoutjs"><span class="octicon octicon-link"></span></a>tappedout.js</h1>
+
+<p>The widget can be included on any page.  It is designed around the idea of being sandboxed and not effecting any other functionality on the site it is included on.</p>
+
+<p>Just add the js file to your script tags on the website. <a href="http://tappedout.net/tappedout.js">http://tappedout.net/tappedout.js</a></p>
+
+<p>The parser will strip existing html and use a line by line evaluation of the contents to submit to tapped out for proper formatting.</p>
+
+<h2>
+<a name="explicit-use" class="anchor" href="#explicit-use"><span class="octicon octicon-link"></span></a>Explicit Use</h2>
+
+<p>Elements with the class deck-list will be evaluated, parsed and built out.</p>
+
+<p>Valid code:</p>
+
+<pre><code>&lt;div class="deck-list"&gt;
+    1x Card Name
+    99 Card Name 2
+    Ignored line
+    9999x Card Name 3
+
+    Sideboard|sideboard|Sideboard:
+    2x
+&lt;/div&gt;
+</code></pre>
+
+<p>Numbers in a explicit block can be followed optionally by 'x'.  The word sideboard on its own line designates the following items are sideboard items. Lines starting with neither a number nor sideboard are ignored and removed in the final rendering.</p>
+
+<h2>
+<a name="explicit-use-2" class="anchor" href="#explicit-use-2"><span class="octicon octicon-link"></span></a>Explicit Use 2</h2>
+
+<p>Additionally, if you want to show off a deck you created on tapped out, you can do the following:</p>
+
+<pre><code>&lt;div class="deck-list" data-stub="theres-a-sliver-for-that"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>Where the data-stub attributes contains your deck's stub.</p>
+
+<h2>
+<a name="implicit-use" class="anchor" href="#implicit-use"><span class="octicon octicon-link"></span></a>Implicit Use</h2>
+
+<p>The widget will search for blockquote tags on your page.  If it finds one and the block contains a line that begins with a number followed by x, it will attempt to parse the content just like the explicit use.</p>
+
+<pre><code>&lt;blockquote&gt;
+    12x Serra Angel
+&lt;/blockquote&gt;
+</code></pre>
+
+<p>This will not parse:</p>
+
+<pre><code>&lt;blockquote&gt;
+    12 Serra Angel
+&lt;/blockquote&gt;
+</code></pre>
 
 <h1>
-<a name="key-concepts" class="anchor" href="#key-concepts"><span class="octicon octicon-link"></span></a>Key Concepts</h1>
+<a name="api-key-concepts" class="anchor" href="#api-key-concepts"><span class="octicon octicon-link"></span></a>API Key Concepts</h1>
 
 <h2>
 <a name="cardspec" class="anchor" href="#cardspec"><span class="octicon octicon-link"></span></a>CardSpec</h2>
