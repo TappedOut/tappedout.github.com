@@ -33,9 +33,7 @@
 <h1>
 <a name="tappedoutjs" class="anchor" href="#tappedoutjs"><span class="octicon octicon-link"></span></a>tappedout.js</h1>
 
-<p>The widget can be included on any page.  It is designed around the idea of being sandboxed and not effecting any other functionality on the site it is included on.</p>
-
-<p>Just add this script tag to your website.</p>
+<p>Just add this script tag to the head tag your blog or website. It provides two handy features: taking simple card names and deck-lists and creating a rich javascript interface with popover images, etc.</p>
 
 <pre><code>&lt;script src="http://tappedout.net/tappedout.js"&gt;&lt;/script&gt;
 </code></pre>
@@ -43,7 +41,15 @@
 <p>The parser will strip existing html and use a line by line evaluation of the contents to submit to tapped out for proper formatting.</p>
 
 <h2>
-<a name="explicit-use" class="anchor" href="#explicit-use"><span class="octicon octicon-link"></span></a>Explicit Use</h2>
+<a name="card-display" class="anchor" href="#card-display"><span class="octicon octicon-link"></span></a>Card display</h2>
+
+<pre><code>I'd like to thank &lt;span class="mtgcard"&gt;Phyrexian Dreadnought&lt;/span&gt; for existing. But really &lt;span class="mtgcard"&gt;Serra Angel [M10]&lt;/span&gt; is my jam.
+</code></pre>
+
+<p>The widget will turn the simple text into a link with image popover if it can find the card.</p>
+
+<h2>
+<a name="decklists" class="anchor" href="#decklists"><span class="octicon octicon-link"></span></a>Decklists</h2>
 
 <p>Elements with the class deck-list will be evaluated, parsed and built out.</p>
 
@@ -63,7 +69,7 @@
 <p>Numbers in a explicit block can be followed optionally by 'x'.  The word sideboard on its own line designates the following items are sideboard items. Lines starting with neither a number nor sideboard are ignored and removed in the final rendering.</p>
 
 <h2>
-<a name="explicit-use-2" class="anchor" href="#explicit-use-2"><span class="octicon octicon-link"></span></a>Explicit Use 2</h2>
+<a name="decklist-2" class="anchor" href="#decklist-2"><span class="octicon octicon-link"></span></a>Decklist 2</h2>
 
 <p>Additionally, if you want to show off a deck you created on tapped out, you can do the following:</p>
 
