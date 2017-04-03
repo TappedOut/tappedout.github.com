@@ -1,0 +1,8 @@
+title: tappedout.github.com/api
+description: TappedOut
+google_analytics: UA-622331-17
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
